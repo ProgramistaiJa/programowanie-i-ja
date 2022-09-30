@@ -112,4 +112,7 @@ and
 or
 `nx build-storybook ui`
 
-## 
+## Generate stories from components
+
+- generate a new React button component `nx g @nrwl/react:component button --project=ui --export`
+- generate stories `nx g @nrwl/react:stories --project=ui`

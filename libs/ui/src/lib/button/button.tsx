@@ -3,14 +3,14 @@ import styled from 'styled-components';
 /* eslint-disable-next-line */
 export interface ButtonProps {}
 
-const StyledButton = styled.div`
+const StyledButton = styled.button`
   color: pink;
 `;
 
 export function Button(props: ButtonProps) {
   return (
     <StyledButton>
-      <h1>Welcome to Button!</h1>
+      Welcome Button!
     </StyledButton>
   );
 }
