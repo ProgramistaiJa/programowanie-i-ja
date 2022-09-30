@@ -1,0 +1,63 @@
+{
+  "name": "javascript-i-ja",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/javascript-i-ja",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/javascript-i-ja",
+        "outputPath": "dist/apps/javascript-i-ja"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/javascript-i-ja"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "javascript-i-ja:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "javascript-i-ja:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "javascript-i-ja:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "javascript-i-ja:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/javascript-i-ja"],
+      "options": {
+        "jestConfig": "apps/javascript-i-ja/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/javascript-i-ja/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
