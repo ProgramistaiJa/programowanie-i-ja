@@ -96,7 +96,9 @@ Teams using Nx gain the advantage of building full-stack applications with their
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
 
-## Storybook
+# Storybook
+
+## Scripts
 
 We can run and build our new Storybook with these commands:
 
@@ -109,3 +111,5 @@ and
 `nx run ui:build-storybook`
 or
 `nx build-storybook ui`
+
+## 
