@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
-/* eslint-disable-next-line */
-export interface ButtonProps {}
+export interface ButtonProps {
+  text: string
+}
 
 const StyledButton = styled.button`
   color: pink;
 `;
 
-export function Button(props: ButtonProps) {
+export function Button({text}: ButtonProps) {
   return (
     <StyledButton>
-      Welcome Button!
+      {text}
     </StyledButton>
   );
 }
