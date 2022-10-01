@@ -9,7 +9,7 @@ function UiLink({href, text}:UiLinkProps) {
     return (
      
         <Link href={href}>
-            <a>{text}</a>
+            {text}
         </Link>
     )
   }
