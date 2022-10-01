@@ -4,4 +4,7 @@ export const links = [{
   }, {
     href: '/nxdev',
     text: 'nxdev'
+  }, {
+    href: '/places',
+    text: 'Places'
   }]

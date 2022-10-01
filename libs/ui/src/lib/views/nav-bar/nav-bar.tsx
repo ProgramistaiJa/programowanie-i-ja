@@ -25,7 +25,7 @@ export function NavBar({links}: NavBarProps) {
   return (
     <StyledNavBar>
       <NavBarLinks>
-        {links.map(({href, text}) => (
+        {links && links.map(({href, text}) => (
           <li key={text}><UiLink href={href} text={text}/></li>
         ))}
       </NavBarLinks>
