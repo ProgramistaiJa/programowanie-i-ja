@@ -1,16 +1,36 @@
 import styled from 'styled-components';
+import UiLink, { UiLinkProps } from '../../components/link/link';
 
-/* eslint-disable-next-line */
-export interface NavBarProps {}
+
+export interface NavBarProps {
+  links: UiLinkProps[]
+}
 
 const StyledNavBar = styled.div`
-  color: pink;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 `;
+const NavBarLinks = styled.ul`
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  column-gap: 10px;
+  
+`
 
-export function NavBar(props: NavBarProps) {
+export function NavBar({links}: NavBarProps) {
   return (
     <StyledNavBar>
+      <NavBarLinks>
+        {links.map(({href, text}) => (
+          <li key={text}><UiLink href={href} text={text}/></li>
+        ))}
+      </NavBarLinks>
       <h1>Welcome to NavBar!</h1>
+      <div>User name</div>
     </StyledNavBar>
   );
 }

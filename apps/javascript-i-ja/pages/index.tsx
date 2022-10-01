@@ -1,4 +1,3 @@
-import { NavBar } from '@programowanie-i-ja/ui';
 import styled from 'styled-components';
 
 const StyledPage = styled.div`
@@ -15,9 +14,7 @@ export function Index() {
   return (
     <StyledPage>
       <div className="wrapper">
-      <NavBar />
         <div className="container">
-          <NavBar />
           <div id="welcome">
             <h1>
               Welcome javascript-i-ja 👋

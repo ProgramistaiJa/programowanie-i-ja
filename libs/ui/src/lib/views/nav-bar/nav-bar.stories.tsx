@@ -10,4 +10,6 @@ export default Story;
 const Template: ComponentStory<typeof NavBar> = (args) => <NavBar {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  links: [{ href: '/', text: 'Home' }]
+};
