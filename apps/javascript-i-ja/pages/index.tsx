@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import { StyledPage } from '@programowanie-i-ja/ui';
 
-const StyledPage = styled.div`
-  .page {
-  }
-`;
+// const StyledPage = styled.div`
+//   .page {
+//   }
+// `;
 
 export function Index() {
   /*

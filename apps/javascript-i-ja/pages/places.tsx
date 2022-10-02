@@ -1,9 +1,5 @@
-import styled from 'styled-components';
+import { StyledPage } from "@programowanie-i-ja/ui";
 
-const StyledPage = styled.div`
-  .page {
-  }
-`;
 
 const places = [{
     name: 'Frontlive.pl',
